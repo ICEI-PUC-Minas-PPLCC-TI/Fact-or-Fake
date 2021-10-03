@@ -13,8 +13,9 @@ que foram confirmados por nós como de confiança.
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Rommel Vieira Carneiro
+* Rosilane Ribeiro Da Mota
+* Carlos Augusto Paiva Da Silva Martins
 
 ## Instruções de utilização
 
