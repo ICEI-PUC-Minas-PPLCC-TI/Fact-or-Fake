@@ -1,5 +1,4 @@
-| Header | Another header | Yet another header |
-|--- |--- |--- |
-| row 1 | column 2 | column 3 |
-| row 2 | row 2 column 2 | row 2 column 3 |
-
+| Comando | Descrição |
+| --- | --- |
+| git status | Lista de todos os arquivos modificados ou novos |
+| git diff | Mostra as diferenças do arquivo que não foram preparadas |
