@@ -3,7 +3,7 @@
 
 | Nome | Quero|Finalidade|
 |------|------|----------|
-| Gustavo | aprender |noticias asfasdfasdfasd|
-| Carlos | ver noticia |noticis|
+| Gustavo | Informações confiáveis de fácil acesso |Aprender e estudar|
+| Carlos | ver noticia ||
 | Olinda | ver noticia |noticis|
 | Marina | ver noticia |noticis|
