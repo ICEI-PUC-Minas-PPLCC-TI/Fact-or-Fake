@@ -3,5 +3,5 @@
 
 | Nome | Quero|Finalidade|
 |------|------|----------|
-| Pedro | aprender |noticias|
+| Pedro | aprender |noticias asfasdfasdfasd|
 | Henrique | ver noticia |noticis|
