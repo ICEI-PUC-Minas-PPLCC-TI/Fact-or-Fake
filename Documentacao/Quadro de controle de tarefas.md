@@ -7,4 +7,4 @@
 |Especificação do Projeto|
 |Metodologia - Estrutura e fluxo de trabalho|
 |Metodologia - Quadro de controle de tarefas|
-|Slide|
+|Slide|Cerceau,Olyntho,Henrique|Completo|
