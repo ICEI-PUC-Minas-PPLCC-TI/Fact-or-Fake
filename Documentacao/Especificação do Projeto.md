@@ -1,7 +1,9 @@
-## Histórias de Úsuario
+## Histórias de Usuário
 
 
 | Nome | Quero|Finalidade|
 |------|------|----------|
-| Pedro | aprender |noticias asfasdfasdfasd|
-| Henrique | ver noticia |noticis|
+| Gustavo | aprender |noticias asfasdfasdfasd|
+| Carlos | ver noticia |noticis|
+| Olinda | ver noticia |noticis|
+| Marina | ver noticia |noticis|
