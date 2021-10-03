@@ -2,7 +2,8 @@
  O problema a ser discutido são as Fake News, e qual seria uma forma de evitar que se espalhem. 
 
 
-## Objetivo: O nosso objetivo é criar um site para ajudar as pessoas e indicar notícias confiáveis. Ele deve:
+## Objetivo: 
+O nosso objetivo é criar um site para ajudar as pessoas e indicar notícias confiáveis. Ele deve:
  * identificar a notícia como confiável ou não.
  * indicar revistas e jornais digitais confiaveis para estudo pessoal.
 
