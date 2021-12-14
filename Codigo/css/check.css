@@ -1,0 +1,15 @@
+body{
+    background-image: url(../imagens/deu\ certo.gif);
+    background-repeat: no-repeat; 
+    background-position: 0 -200px;
+    background-size: cover;    
+}
+h1{
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(103, 202, 5);
+}
+a{
+    text-decoration: none;
+    color: black;
+}

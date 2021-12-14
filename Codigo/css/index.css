@@ -4,7 +4,7 @@ html,body{
 
 body,
 ul,
-li,
+
 p {
   
   list-style-type: none;
@@ -20,6 +20,58 @@ p1,p2,p3{
     margin: 3px 20;
 
 }
+li{
+  margin: -5px;
+  padding: 0;
+}
+.dropdown{
+  text-align: center ;
+  background-color: transparent !important;
+}
+.dropdown:hover{
+  background: transparent !important;
+  
+}
+.dropdown-toggle{
+  background-color: transparent !important;
+  text-align: center ;
+}
+.dropdown-toggle:hover{
+  background-color: transparent !important;
+}
+.dropdown-item{
+  font-size: 1.5rem;
+  background-color: black !important;
+}
+.dropdown-item:hover{
+  background-color: rgb(36, 36, 36) !important;
+
+}
+.dropdown-menu{
+  text-align: center ;
+  background-color: black !important;
+}
+.box-noticia {
+  margin: 10px 0px;
+  overflow: auto;
+  color: dimgray;
+  clear: both;
+}
+
+.box-noticia img {
+  float: left;
+  margin-right: 10px;
+  width: 180px;
+}
+
+.box-noticia .titulo {
+  font-weight: 700;
+}
+
+.box-noticia .creditos {
+  color: red
+}
+
 h1{
     
     margin-bottom: 50px;
@@ -121,7 +173,8 @@ li a  {
 }
 
 .footer {
-  background: #727272;
+  
+  background: #000000;
   color: white;
   display: flex;
   
@@ -157,15 +210,14 @@ li a  {
 }
 
 .footer p {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
   margin-top: 20px;
+  
 
 }
-.footer img {
-    max-width: 50px;
-    margin-top: 20px;
-    position: relative;
-    left:  900px;
-      }
+
 
 
 .formu h2{
@@ -181,6 +233,16 @@ color: rgb(144, 240, 0);
 
 color: red !important;
 }
+
+
+.card a{
+  width: 40px;
+  font-size: 1.3rem;
+  
+
+  
+}
+
 .featurette-divider {
         margin: 5rem 0; /* Space out the Bootstrap <hr> more */
       }
@@ -251,6 +313,7 @@ color: red !important;
 }
 
 @media screen and (min-width:601px) and (max-width:980px){
+
   .menu1{
 
       margin: 0px;
@@ -341,13 +404,21 @@ color: red !important;
     margin-left: -30px ;
   }
 
-  .menu1 a {
-    
+  .menu1 a,li {
+      
     margin-top: 10px; 
     display: block;
     text-align: center;
     width: 100%;
     margin-bottom:0px;
+  }
+  .dropdown-menu{
+    width: 100%;
+    background: transparent !important;
+  }
+  .dropdown-item{
+    background: transparent !important;
+
   }
   .menu-icon {
       margin: -25px 0 ;
