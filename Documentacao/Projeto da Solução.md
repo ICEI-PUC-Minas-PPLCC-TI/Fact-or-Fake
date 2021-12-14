@@ -34,4 +34,15 @@ ID|Descrição|
  
  -NewsApi
  
- 
+ ##Arquitetura:
+
+Navegador - Interface básica do sistema. 
+
+Páginas Web - Arquivos HTML, CSS, JavaScript e imagens. 
+
+Local Storage - Armazenamento salvo no navegador, que implementa um banco de dados baseado em JSON. São eles: 
+
+        Usuários - registro de usuários. 
+
+Hospedagem - local na Internet onde as páginas são mantidas e acessadas pelo navegador utilizando Replit.
+
