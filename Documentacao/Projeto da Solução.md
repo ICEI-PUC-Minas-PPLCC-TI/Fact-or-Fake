@@ -40,7 +40,7 @@ Navegador - Interface básica do sistema.
 
 Páginas Web - Arquivos HTML, CSS, JavaScript e imagens. 
 
-Local Storage - Armazenamento salvo no navegador, que implementa um banco de dados baseado em JSON. São eles: 
+Local Storage - Armazenamento salvo no navegador, que implementa um banco de dados baseado em JSON. Como: 
 
         Usuários - registro de usuários. 
 
