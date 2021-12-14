@@ -34,7 +34,7 @@ ID|Descrição|
  
  -NewsApi
  
- ##Arquitetura:
+ ## Arquitetura:
 
 Navegador - Interface básica do sistema. 
 
