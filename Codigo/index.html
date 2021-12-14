@@ -1,23 +1,35 @@
 <html lang="pt-br">
 
+    
 <head>
+
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>site tiaw</title>
-
+    <title>fact or fake</title>
+    <link rel="shortcut icon" type="imagex/png" href="imagens/selo-fake.png">
     <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/index.css">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/0fa763f45b.js" crossorigin="anonymous"></script>
+
+    <!-- Sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+
+
 </head>
 
 <body>
     <header class=".container-fluid header">
 
-        <img src="imagens/selo-fake.png">
+        <a href="index.html"><img src="imagens/selo-fake.png"></a>
         <div class="container_nav">
             <input type="checkbox" id="menuToggle">
             <label for="menuToggle" class="menu-icon">
@@ -27,15 +39,32 @@
 
             <nav class="nav menu1">
                 <a class="nav-link active" href="index.html">Home </a>
+                <a class="nav-link " href="verificador.html">Verificador </a>
                 <a class="nav-link" href="sobre.html">Sobre </a>
-                <a class="nav-link" href="contatos.html">Contato</a>
+                <a class="nav-link" href="contatos.html">DEVs</a>
+                <a class="nav-link" id="login" href="login.html">Login</a>
+                <li class="nav-item dropdown bg-black" id='drop'>
+                    <a class="nav-link dropdown-toggle bg-black " href="#" id="navbarDropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <div class="dropdown-menu  " aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item bg-black" id="dashboard" href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a>
+                    
+                        <a class="dropdown-item bg-black "  id="btnLogout" href=""><i class="fa fa-sign-out"></i>Sair</a>
+
+
+                    </div>
 
 
             </nav>
 
 
 
+
     </header>
+
+
     <div class="Carrosel">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -45,40 +74,45 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="first-slide" src="imagens/noticias 01.png" alt="First slide" >
+                    <img class="first-slide" src="imagens/noticias 3.png" alt="First slide">
                     <div class="container">
                         <div class="carousel-caption text-left">
                             <h1>Os desequilíbrios da economia mundial e a crise da COVID-19</h1>
-                            <p>O mundo entrou na pandemia de COVID-19 com desequilíbrios externos persistentes e pré-existentes. A crise causou uma forte
-                                 queda do comércio e flutuações significativas nas taxas de câmbio, porém uma redução limitada dos déficits e superávits
-                                  mundiais em conta corrente. As perspectivas continuam altamente incertas, pois ainda pairam
-                                 no horizonte riscos de novas ondas de contágio, inversão dos fluxos de capital e um novo declínio do comércio internacional.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Ler mais</a></p>
+                            <p>O mundo entrou na pandemia de COVID-19 com desequilíbrios externos persistentes e
+                                pré-existentes. A crise causou uma forte
+                                queda do comércio e flutuações significativas nas taxas de câmbio, porém uma redução
+                                limitada dos déficits e superávits
+                                mundiais em conta corrente. As perspectivas continuam altamente incertas, pois ainda
+                                pairam
+                                no horizonte riscos de novas ondas de contágio, inversão dos fluxos de capital e um novo
+                                declínio do comércio internacional.</p>
+                            <p><a class="btn btn-lg btn-primary" href="https://www.imf.org/pt/News/Articles/2020/08/04/blog-global-rebalancing-and-the-covid19-crisis" role="button">Ler mais</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="second-slide" src="imagens/noticias 2.png" alt="Second slide" >
+                    <img class="second-slide" src="imagens/noticias 2.png" alt="Second slide">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>Queda abrupta de casos de covid-19</h1>
-                            <p>Em meados de junho, enquanto o resto do mundo 
-                                experimentava um baixo número de novos casos de covid-19, a América do Sul se tornava o epicentro da pandemia</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Ler Mais</a></p>
+                            <p>Em meados de junho, enquanto o resto do mundo
+                                experimentava um baixo número de novos casos de covid-19, a América do Sul se tornava o
+                                epicentro da pandemia</p>
+                            <p><a class="btn btn-lg btn-primary" href="https://g1.globo.com/saude/coronavirus/noticia/2021/09/18/o-que-explica-queda-abrupta-de-casos-de-covid-19-na-america-do-sul-e-no-brasil.ghtml" role="button">Ler Mais</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="third-slide" src="imagens/noticias 3.png" alt="Third slide" >
+                    <img class="third-slide" src="imagens/noticias 01.png" alt="Third slide">
                     <div class="container">
                         <div class="carousel-caption text-right">
                             <h1>Pesquisa prevê carência de 408 mil profissionais de TI até 2022</h1>
                             <p>Já faz algum tempo que o setor de tecnologia da informação (TI) enfrenta
-                                 déficit de profissionais. No Brasil, essa carência deve ser de mais de 408 mil postos
-                                  de trabalho até 2022. Com isso, as perdas acumuladas entre 2010 e 2020 já alcançam os
-                                   R$ 167 bilhões. Os dados são da Softex, uma organização social voltada ao fomento da
-                                    área de TI que integra o Projeto TechDev Paraná.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Ler Mais</a></p>
+                                déficit de profissionais. No Brasil, essa carência deve ser de mais de 408 mil postos
+                                de trabalho até 2022. Com isso, as perdas acumuladas entre 2010 e 2020 já alcançam os
+                                R$ 167 bilhões. Os dados são da Softex, uma organização social voltada ao fomento da
+                                área de TI que integra o Projeto TechDev Paraná.</p>
+                            <p><a class="btn btn-lg btn-primary" href="https://canaltech.com.br/carreira/pesquisa-preve-carencia-de-408-mil-profissionais-de-ti-ate-2022-189998/" role="button">Ler Mais</a></p>
                         </div>
                     </div>
                 </div>
@@ -93,82 +127,137 @@
             </a>
         </div>
     </div>
-        <!-- START THE FEATURETTES -->
+    <div class="card bg-light align-items text-center">
+        <h5 class="card-title featurette-heading ">Verificar <span class="text-muted">Noticia </span></h5>
+        <div class="card-body  ">
 
-        <hr class="featurette-divider">
 
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">Quando ocorrerá o  <span class="text-muted">fim</span> do nosso Sistema Solar?</h2>
-            <p class="lead">Com previsões que encurtam o prazo para o fim do Sistema Solar, estudos realizados por pesquisadores
-                 da Universidade da Califórnia e da Universidade de Michigan buscam, por meio de novas simulações computadorizadas
-                  publicadas no periódico The Astronomical Journal, decifrar o enigma que
-                 desperta a curiosidade de físicos e astrônomos há séculos. Afinal, quando e como o Sistema Solar será extinto?
-                <p class="lead text-right"><a href="https://www.opovo.com.br/noticias/curiosidades/2021/10/29/quando-ocorrera-o-fim-do-nosso-sistema-solar.html">Ler mais</a></p></p>
-            
+            <a href="verificador.html" class="btn btn-outline-success    ">Ir</a>
         </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="imagens/sistema solar.jpg" alt="Generic placeholder image" width="500px"height="500px">
-          </div>
-          
-        </div>
+    </div>
+    <!-- START THE FEATURETTES -->
 
-        <hr class="featurette-divider">
+    <hr class="featurette-divider">
 
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Alpinista perdido em montanha ignora <span class="text-muted">ligações de resgate</span></h2>
-            <p class="lead">Um alpinista dado como desaparecido ao escalar o pico mais alto no Colorado, nos Estados Unidos, ignorou
-                 as ligações da equipe de Busca e Resgate de Lake County por não reconhecer o número que aparecia na tela do seu
-                  celular.
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Quando ocorrerá o <span class="text-muted">fim</span> do nosso Sistema Solar?
+            </h2>
+            <p class="lead">Com previsões que encurtam o prazo para o fim do Sistema Solar, estudos realizados por
+                pesquisadores
+                da Universidade da Califórnia e da Universidade de Michigan buscam, por meio de novas simulações
+                computadorizadas
+                publicadas no periódico The Astronomical Journal, decifrar o enigma que
+                desperta a curiosidade de físicos e astrônomos há séculos. Afinal, quando e como o Sistema Solar será
+                extinto?
+            <p class="lead text-right"><a
+                    href="https://www.opovo.com.br/noticias/curiosidades/2021/10/29/quando-ocorrera-o-fim-do-nosso-sistema-solar.html">Ler
+                    mais</a></p>
             </p>
-            <p class="lead text-right"><a href="https://www.opovo.com.br/noticias/curiosidades/2021/10/27/alpinista-perdido-em-montanha-ignora-ligacoes-de-resgate-por-serem-de-numero-desconhecido.html">Ler mais</a></p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" src="imagens/alpinista.jpg" alt="Generic placeholder image" width="500px" height="500px">
-          </div>
+
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="imagens/sistema solar.jpg"
+                alt="Generic placeholder image" width="500px" height="500px">
         </div>
 
-        <hr class="featurette-divider">
+    </div>
 
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">Transplante de rim de um <span class="text-muted">animal</span> para humano é realizado pela 1ª vez</h2>
-            <p class="lead">O órgão de um animal foi transplantado para um ser humano pela primeira vez sem causar a rejeição imediata do sistema
-                 imunológico do receptor. O procedimento representa um grande avanço na ciência ao possibilitar a amenização da falta de órgãos
-                  humanos para transplante.</p>
-                  <p class="lead text-right"><a href="https://www.opovo.com.br/noticias/curiosidades/2021/10/20/transplante-de-rim-de-um-animal-para-humano-e-realizado-pela-1-vez.html">Ler mais</a></p>
-          </div>
-          
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="imagens/medicos-transplantes-1500x844_1.jpg" alt="Generic placeholder image" width="500px"height="500px">
-          </div>
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Alpinista perdido em montanha ignora <span class="text-muted">ligações de
+                    resgate</span></h2>
+            <p class="lead">Um alpinista dado como desaparecido ao escalar o pico mais alto no Colorado, nos Estados
+                Unidos, ignorou
+                as ligações da equipe de Busca e Resgate de Lake County por não reconhecer o número que aparecia na tela
+                do seu
+                celular.
+            </p>
+            <p class="lead text-right"><a
+                    href="https://www.opovo.com.br/noticias/curiosidades/2021/10/27/alpinista-perdido-em-montanha-ignora-ligacoes-de-resgate-por-serem-de-numero-desconhecido.html">Ler
+                    mais</a></p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" src="imagens/alpinista.jpg" alt="Generic placeholder image"
+                width="500px" height="500px">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Transplante de rim de um <span class="text-muted">animal</span> para humano é
+                realizado pela 1ª vez</h2>
+            <p class="lead">O órgão de um animal foi transplantado para um ser humano pela primeira vez sem causar a
+                rejeição imediata do sistema
+                imunológico do receptor. O procedimento representa um grande avanço na ciência ao possibilitar a
+                amenização da falta de órgãos
+                humanos para transplante.</p>
+            <p class="lead text-right"><a
+                    href="https://www.opovo.com.br/noticias/curiosidades/2021/10/20/transplante-de-rim-de-um-animal-para-humano-e-realizado-pela-1-vez.html">Ler
+                    mais</a></p>
         </div>
 
-        <hr class="featurette-divider">
+        <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="imagens/medicos-transplantes-1500x844_1.jpg"
+                alt="Generic placeholder image" width="500px" height="500px">
+        </div>
+    </div>
 
-        <!-- /END THE FEATURETTES -->
-       
-        <form  class="container formu text-center" action="#">
-            <h2>Procure um <span class="cor">Fato</span></h2>
-            
-            <input class="noticia text-center" type="text" id="fname" name="fname"><br><br>
-            
+    <hr class="featurette-divider">
 
-            <input class ="pesquisa"type="submit" value="Pesquisar">
-          </form>
+    <!-- /END THE FEATURETTES -->
+
+    <div class="container formu text-center" >
+        <h2>Procure um <span class="cor">Fato</span></h2>
+
+        <input class="noticia text-center" type="text" id="txtPesquisa" name="fname"><br><br>
 
 
+        
+        <button class="pesquisa" id="btnPesquisa">Pesquisar</button>
+    </div>
+
+    <div id="tela">
+        <div class="box-noticia">
+            <img src="https://source.unsplash.com/random/120x80" alt="">
+            <span class="titulo">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span><br>
+            <span class="creditos">01/05/2020 - BBC News - Fulano de Tal</span><br>
+            <span class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cumque qui necessitatibus eos quis officia sunt consequatur similique quibusdam eveniet repellat magni dolor dolore, laborum ad accusantium minus soluta at?
+                <a href="#">Leia mais ...</a>
+            </span>
+        </div>
+
+    </div>
 
 
     <footer class=".container-fluid footer">
-        <p>Copyright 2021 - Disciplina de Desenvolvimento de Interfaces Web - <p2>ICEI PUC Minas</p2>
+        <p>Copyright 2021 -TRABALHO INTERDISCIPLINAR: APLICAÇÕES WEB - <p2>ICEI PUC Minas</p2>
         </p>
-        <div class="logo">
 
-            <img src="imagens/puc logo.png">
-        </div>
     </footer>
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        let loggedUser = JSON.parse(sessionStorage.getItem("usuario_logado")) || undefined;
+        
+        if (!loggedUser) {
+            document.getElementById("drop").style.display = 'none'
+
+
+        }
+        else {
+            document.getElementById("login").style.display = 'none'
+            if(loggedUser.tipo != 'adm'){
+                document.getElementById("dashboard").style.display = 'none'
+
+            }
+        }        
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -186,6 +275,42 @@
             $('.dropdown-toggle').dropdown();
         });
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script>
+        let btnLogout = document.getElementById("btnLogout") 
+        btnLogout.addEventListener("click",logout)
+
+        function logout() {
+                sessionStorage.removeItem("usuario_logado");
+                
+            }
+    </script>
+    <script>
+        (function () {
+            // verificar se já existe usuário logado
+
+            let loggedUser = getDataInSessionStorage(),
+                tblUsers = document.querySelector("#tblUsers");
+                
+
+
+
+            // listar usuário logado
+            document.querySelector("#navbarDropdownMenuLink").innerHTML = `Usuário logado: <strong>${loggedUser.nome}</strong>`;
+
+            // listar usuários na tabela
+            listUsers(tblUsers, loggedUser);
+
+            // evento para clique no botão de deslogar
+            
+
+            // setando adm caso ainda não esteja setado
+            setAdmUser();
+
+        })();
+    </script>
+
 </body>
 
 </html>

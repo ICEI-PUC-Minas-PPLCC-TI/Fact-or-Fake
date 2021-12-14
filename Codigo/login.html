@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fact or fake</title>
+    <link rel="shortcut icon" type="imagex/png" href="imagens/selo-fake.png">
+    <!-- estilos globais -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- estilos da página -->
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/0fa763f45b.js" crossorigin="anonymous"></script>
+
+    <!-- Sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <form id="frmLogin">
+            <h1>login</h1>
+
+            <!-- div para input de nome de usuário -->
+            <div class="input-area">
+                <input type="email" id="txtEmail" name="txtEmail" class="form-field" placeholder="E-mail" required/>
+                <label for="txtEmail" class="form-label">E-mail</label>
+            </div>
+
+            <!-- div para input de senha -->
+            <div class="input-area">
+                <input type="password" id="txtPassword" name="txtPassword" class="form-field" placeholder="Senha" required/>
+                <label for="txtPassword" class="form-label">Senha</label>
+            </div>
+    
+            <button type="submit" id="btnLogin">Entrar <i class="fas fa-arrow-right"></i></button>
+
+            <p>Ainda não tem uma conta? <a href="cadastro.html">Crie uma conta!</a></p>
+            <p style="margin-top: 10px;"><a href="index.html"><i class="fas fa-arrow-left"></i>Volte para o site</a> </p>
+        </form>
+    </div>
+
+    <!-- link para o arquivo js padrão -->
+    <script src="js/main.js"></script>
+    <script>
+        // função inicial do sistema
+        (function () {
+            
+            let frmLogin = document.querySelector("#frmLogin");
+
+            frmLogin.addEventListener("submit", (e) => {
+                // impedit página de recarregar
+                e.preventDefault();
+
+                // obtendo os dados do usuário
+                let email = e.target[0].value,
+                    pass = e.target[1].value;
+
+                // chamar função de login
+                login(email, pass);
+            });
+
+            // setando adm caso ainda não esteja setado
+            setAdmUser();
+        })();
+    </script>
+</body>
+</html>

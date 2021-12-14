@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>site tiaw</title>
+    <title>fact or fake</title>
 
+    <link rel="shortcut icon" type="imagex/png" href="imagens/selo-fake.png">
     <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -18,15 +19,21 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
 
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/0fa763f45b.js" crossorigin="anonymous"></script>
+
+    <!-- Sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
 
 <body>
     <header class=".container-fluid header">
 
-        <img src="imagens/selo-fake.png" >
-        
+        <a href="index.html"><img src="imagens/selo-fake.png"></a>
         <div class="container_nav">
             <input type="checkbox" id="menuToggle">
             <label for="menuToggle" class="menu-icon">
@@ -36,11 +43,28 @@
 
             <nav class="nav menu1">
                 <a class="nav-link active" href="index.html">Home </a>
+                <a class="nav-link " href="verificador.html">Verificador </a>
                 <a class="nav-link" href="sobre.html">Sobre </a>
-                <a class="nav-link" href="contatos.html">Contato</a>
+                <a class="nav-link" href="contatos.html">DEVs</a>
+                <a class="nav-link" id="login" href="login.html">Login</a>
+                <li class="nav-item dropdown bg-black" id='drop'>
+                    <a class="nav-link dropdown-toggle bg-black " href="#" id="navbarDropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="True" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item bg-black" id="dashboard" href="dashboard.html"><i
+                                class="fas fa-chart-line"></i>
+                            Dashboard</a>
+
+                        <a class="dropdown-item bg-black " id="btnLogout" href=""><i class="fa fa-sign-out"></i>Sair</a>
+
+
+                    </div>
 
 
             </nav>
+
 
 
 
@@ -49,97 +73,164 @@
 
 
 
-<main>
-    <div class="container formulario">
-        <h2 class="text-center">Contato  Form</h2>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6 pb-5">
-    
-    
-                        <!--Form with header-->
-    
-                        <form action="https://api.staticforms.xyz/submit" method="post">
-                            <input type="hidden" name="accessKey" value="2783b000-9651-4b51-8f59-7c19947a6487">
-                            <div class="card border-dark  bg-dark rounded">
-                                <div class="card-header p-0 black">
-                                    <div class="bg-dark  text-white text-center py-2">
-                                        <h3><i class="fa fa-envelope bg-dark "></i> Contato</h3>
-                                        <p class="m-0 text-center">ajudaremos você por email</p>
-                                    </div>
-                                </div>
-                                <div class="card-body p-3">
-    
-                                    <!--Body-->
-                                    <div class="form-group">
-                                        <div class="input-group mb-2">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
-                                            </div>
-                                            <input type="text" class="form-control" id="nombre" name="name" placeholder="Nome e sobrenome" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="input-group mb-2">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text"><i class="fa fa-envelope text-info"></i></div>
-                                            </div>
-                                            <input type="email" class="form-control" id="nombre" name="email" placeholder="exemplo@gmail.com" required>
-                                        </div>
-                                    </div>
-    
-                                    <div class="form-group">
-                                        <div class="input-group mb-2">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
-                                            </div>
-                                            <textarea class="form-control"  id="message" name= "message" placeholder="Enviamos  sua Mensagens" required></textarea>
-                                        </div>
-                                    </div>
-    
-                                    <div class="text-center bg-dark ">
-                                        <input type="submit" value="Enviar" class="btn btn-light btn-block rounded-0 py-2">
-                                    </div>
-                                </div>
-                                <input type="hidden" name="redirectTo" value="https://discretetubbyoperatingenvironment.pedroaifail11.repl.co/contatos.html">
-    
-                            </div>
-                        </form>
-                        <!--Form with header-->
-    
-    
+    <main class="main">
+
+        <h1 style="text-align: center;margin: 50px;">DEVs</h1>
+        <section class="light">
+
+            <div class="container py-2">
+
+                <article class="postcard light blue">
+                    <a class="postcard__img_link" href="https://github.com/FrizzTheDark">
+                        <img class="postcard__img" src="imagens/Pedro2.jpeg" alt="Image Title" />
+                    </a>
+                    <div class="postcard__text t-dark">
+                        <h1 style="margin-left: 22px;" class="postcard__title blue"><a
+                                href="https://github.com/FrizzTheDark">Pedro Kreuzer</a></h1>
+                        <div class="postcard__subtitle small">
+                            <time datetime="14/12/2021 12:00:00">
+                                <i class="fas fa-calendar-alt mr-2"></i>14/12/2021 12:00:00
+                            </time>
+                        </div>
+                        <div class="postcard__bar"></div>
+                        <div class="postcard__preview-txt">Meu nome é Pedro Cerceau Kreuzer, tenho 20 anos e só aluno da
+                            PUC MG do curso da Ciência da Computação, sou fluente em inglês, alemão, italiano e francês,
+                            sei utilizar as linguagens de programação C, C++, C#, Python, Java, JavaScript, HTML e CSS.
+                        </div>
+
                     </div>
-        </div>
-    </div>
+                </article>
+                <article class="postcard light red">
+                    <a class="postcard__img_link" href="https://github.com/pedroolynth0">
+                        <img class="postcard__img" src="imagens/pedro.jpeg" alt="Image Title" />
+                    </a>
+                    <div class="postcard__text t-dark">
+                        <h1 class="postcard__title red"><a href="https://github.com/pedroolynth0">Pedro Olyntho</a></h1>
+                        <div class="postcard__subtitle small">
+                            <time datetime="14/12/2021 12:00:00">
+                                <i class="fas fa-calendar-alt mr-2"></i>14/12/2021 12:00:00
+                            </time>
+                        </div>
+                        <div class="postcard__bar"></div>
+                        <div class="postcard__preview-txt red">Experiência de 2 anos em programação com conhecimentos de
+                            C#, C++
+                            e Python.
+                            Cursando Ciência da Computação na PUC-Minas.Faço trabalho voluntário como desenvolvedor de
+                            games
+                            para a Associação das Crianças Felizes.
+                            Também tenho conhecimento em SQL, Unix Shell Scripts, Node JS e Java Script.
+                            Tenho inglês intermediário e curso espanhol duas vezes por semana para terminar o nível
+                            básico
+                            (A2)
+                            até o final do ano.</div>
+
+
+                    </div>
+                </article>
+
+                <article class="postcard light yellow">
+                    <a class="postcard__img_link" href="https://github.com/Henrique-Pato">
+                        <img class="postcard__img" src="imagens/henrique.jpeg" alt="Image Title" />
+                    </a>
+                    <div class="postcard__text t-dark">
+                        <h1 class="postcard__title yellow"><a style="margin-left: 5px;" class="yellow"
+                                href="https://github.com/Henrique-Pato">Henrique Pato </a></h1>
+                        <div class="postcard__subtitle small">
+                            <time datetime="14/12/2021 12:00:00">
+                                <i class="fas fa-calendar-alt mr-2"></i>14/12/2021 12:00:00
+                            </time>
+                        </div>
+                        <div class="postcard__bar"></div>
+                        <div class="postcard__preview-txt"> Olá, eu sou Henrique Pato, estou atualmente cursando o curso
+                            de ciências da computação da PUC minas. Conheço as linguagens C, HTML, CSS, Javascript e
+                            linguagens de bloco como Scratch e App inventor. Já fui parte do grupo de dança
+                            “Sarandeiros” e divulguei a cultura brasileira para aqueles que nos assistiram, já
+                            participei também de trabalhos voluntários proporcionados pelo Colégio santo agostinho.
+                        </div>
+
+                    </div>
+                </article>
+            </div>
 
 
 
 
-    <footer class=".container-fluid footer">
-        <p>Copyright 2021 - Disciplina de Desenvolvimento de Interfaces Web - <p2>ICEI PUC Minas</p2>
-        </p>
-        <div class="logo">
 
-            <img src="imagens/puc logo.png">
-        </div>
-    </footer>
+            <footer class=".container-fluid footer">
+                <p>Copyright 2021 -TRABALHO INTERDISCIPLINAR: APLICAÇÕES WEB - <p2>ICEI PUC Minas</p2>
+                </p>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
-    <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
-    <script>
-        $(function () {
-            $('.dropdown-toggle').dropdown();
-        });
-    </script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            </footer>
+            <script src="js/main.js"></script>
+            <script>
+                let loggedUser = JSON.parse(sessionStorage.getItem("usuario_logado")) || undefined;
+
+                if (!loggedUser) {
+                    document.getElementById("drop").style.display = 'none'
+
+
+                }
+                else {
+                    document.getElementById("login").style.display = 'none'
+                    if (loggedUser.tipo != 'adm') {
+                        document.getElementById("dashboard").style.display = 'none'
+
+                    }
+                }        
+            </script>
+
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+                integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                crossorigin="anonymous"></script>
+            <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+            <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
+            <script>
+                $(function () {
+                    $('.dropdown-toggle').dropdown();
+                });
+            </script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+            <script>
+                let btnLogout = document.getElementById("btnLogout")
+                btnLogout.addEventListener("click", logout)
+
+                function logout() {
+                    sessionStorage.removeItem("usuario_logado");
+
+                }
+            </script>
+            <script>
+                (function () {
+                    // verificar se já existe usuário logado
+
+                    let loggedUser = getDataInSessionStorage(),
+                        tblUsers = document.querySelector("#tblUsers");
+
+
+
+
+                    // listar usuário logado
+                    document.querySelector("#navbarDropdownMenuLink").innerHTML = `Usuário logado: <strong>${loggedUser.nome}</strong>`;
+
+                    // listar usuários na tabela
+                    listUsers(tblUsers, loggedUser);
+
+                    // evento para clique no botão de deslogar
+
+
+                    // setando adm caso ainda não esteja setado
+                    setAdmUser();
+
+                })();
+            </script>
+
 </body>
 
 </html>

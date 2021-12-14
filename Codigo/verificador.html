@@ -1,0 +1,231 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fact or fake</title>
+
+    <link rel="shortcut icon" type="imagex/png" href="imagens/selo-fake.png">
+    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/verificador.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/0fa763f45b.js" crossorigin="anonymous"></script>
+
+    <!-- Sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="css/verificador.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script>
+        (function () {
+
+            let loggedUser = JSON.parse(sessionStorage.getItem("usuario_logado")) || undefined;
+
+            if (!loggedUser) {
+                window.location = 'login.html';
+            }
+
+
+        })();
+    </script>
+</head>
+
+<body>
+    <header class=".container-fluid header">
+
+        <a href="index.html"><img src="imagens/selo-fake.png"></a>
+        <div class="container_nav">
+            <input type="checkbox" id="menuToggle">
+            <label for="menuToggle" class="menu-icon">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times-circle"></i>
+            </label>
+
+            <nav class="nav menu1">
+                <a class="nav-link active" href="index.html">Home </a>
+                <a class="nav-link " href="verificador.html">Verificador </a>
+                <a class="nav-link" href="sobre.html">Sobre </a>
+                <a class="nav-link" href="contatos.html">DEVs</a>
+                <a class="nav-link" id="login" href="login.html">Login</a>
+                <li class="nav-item dropdown bg-black" id='drop'>
+                    <a class="nav-link dropdown-toggle bg-black " href="#" id="navbarDropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="True" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item bg-black" id="dashboard" href="dashboard.html"><i
+                                class="fas fa-chart-line"></i>
+                            Dashboard</a>
+                        <a class="dropdown-item bg-black " id="btnLogout" href=""><i class="fa fa-sign-out"></i>Sair</a>
+
+
+                    </div>
+
+
+            </nav>
+
+
+
+
+    </header>
+
+
+
+
+    <div class="content">
+
+        <div class="container">
+            <div class="row align-items-stretch no-gutters contact-wrap">
+                <div class="col-md-12">
+                    <div class="form h-100">
+                        <h1 style="text-align: center;" ><strong> Verificador</strong><img class="img1" src="imagens/trust_fake.gif" alt=""></h1>
+                        
+                        <form action="https://api.staticforms.xyz/submit" method="post" id="staticform">
+                            <input type="hidden" name="accessKey" value="cb4864cb-9af5-4066-87a3-8c5afe163ad8">
+                            <div class="row">
+                                <div class="col-md-6 form-group mb-3">
+                                    <label for="" class="col-form-label">Name *</label>
+                                    <input type="text" class="form-control" name="name" id="name"
+                                        placeholder="Your name" required>
+                                </div>
+                                <div class="col-md-6 form-group mb-3">
+                                    <label for="" class="col-form-label">Email *</label>
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="Your email" required>
+                                        
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 form-group mb-3">
+                                    <label for="budget" class="col-form-label">Link</label>
+                                    <input type="text" class="form-control" name="$link" id="link"
+                                        placeholder="Digite o link da Noticia aqui..." required>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 form-group mb-3">
+                                    <label for="message" class="col-form-label">Message *</label>
+                                    <textarea class="form-control" name="message" id="message" cols="30" rows="4"
+                                        placeholder="Write your message" required></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <input type="submit" value="Enviar"
+                                        class="btn btn-primary rounded-0 py-2 px-4">
+                                    <span class="submitting"></span>
+                                    <input type="hidden" name="redirectTo" value="http://127.0.0.1:5501/check.html">
+                                </div>
+                            </div>
+                        </form>
+                        
+
+                        <div id="form-message-warning mt-4"></div>
+                        <div id="form-message-success">
+                            Your message was sent, thank you!
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <footer class=".container-fluid footer">
+        <p>Copyright 2021 -TRABALHO INTERDISCIPLINAR: APLICAÇÕES WEB - <p2>ICEI PUC Minas</p2>
+        </p>
+
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script>
+        let loggedUser = JSON.parse(sessionStorage.getItem("usuario_logado")) || undefined;
+
+        if (!loggedUser) {
+            document.getElementById("drop").style.display = 'none'
+
+
+        }
+        else {
+            document.getElementById("login").style.display = 'none'
+            if (loggedUser.tipo != 'adm') {
+                document.getElementById("dashboard").style.display = 'none'
+
+            }
+        }        
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+    <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
+    <script>
+        $(function () {
+            $('.dropdown-toggle').dropdown();
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script>
+        let btnLogout = document.getElementById("btnLogout")
+        btnLogout.addEventListener("click", logout)
+
+        function logout() {
+            sessionStorage.removeItem("usuario_logado");
+
+        }
+    </script>
+    <script>
+        (function () {
+            // verificar se já existe usuário logado
+
+            let loggedUser = getDataInSessionStorage(),
+                tblUsers = document.querySelector("#tblUsers");
+
+
+
+
+            // listar usuário logado
+            document.querySelector("#navbarDropdownMenuLink").innerHTML = `Usuário logado: <strong>${loggedUser.nome}</strong>`;
+
+            // listar usuários na tabela
+            listUsers(tblUsers, loggedUser);
+
+            // evento para clique no botão de deslogar
+
+
+            // setando adm caso ainda não esteja setado
+            setAdmUser();
+
+        })();
+    </script>
+
+</body>
+
+</html>

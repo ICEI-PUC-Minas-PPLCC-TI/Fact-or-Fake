@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fact or fake</title>
+    <link rel="shortcut icon" type="imagex/png" href="imagens/selo-fake.png">
+    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- estilos globais -->
+
+
+    <!-- estilos da página -->
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/0fa763f45b.js" crossorigin="anonymous"></script>
+
+    <!-- Sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- verificar se tem usuário logado -->
+    <script>
+        (function () {
+
+            let loggedUser = JSON.parse(sessionStorage.getItem("usuario_logado")) || undefined;
+
+            if (!loggedUser) {
+                window.location = 'login.html';
+            } else {
+                if (loggedUser.tipo != 'adm') {
+                    window.location = 'login.html';
+
+                }
+            }
+
+
+        })();
+    </script>
+</head>
+
+<body>
+    <header class=".container-fluid header">
+
+        <a href="index.html"><img src="imagens/selo-fake.png"></a>
+        <div class="container_nav">
+            <input type="checkbox" id="menuToggle">
+            <label for="menuToggle" class="menu-icon">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times-circle"></i>
+            </label>
+
+            <nav class="nav menu1">
+                <a class="nav-link active" href="index.html">Home </a>
+                <a class="nav-link " href="verificador.html">Verificador </a>
+                <a class="nav-link" href="sobre.html">Sobre </a>
+                <a class="nav-link" href="contatos.html">DEVs</a>
+                <a class="nav-link" id="login" href="login.html">Login</a>
+                <li class="nav-item dropdown bg-black" id='drop'>
+                    <a class="nav-link dropdown-toggle bg-black " href="#" id="navbarDropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <div class="dropdown-menu  " aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item bg-black" href="dashboard.html"><i class="fas fa-chart-line"></i>
+                            Dashboard</a>
+                        
+                        <a class="dropdown-item  "><button type="button " id="btnLogout"
+                                class="btn-logout bg-transparent"><i class="fa fa-sign-out"></i>Sair</button></a>
+
+
+
+
+                    </div>
+
+
+            </nav>
+
+
+
+
+    </header>
+    <h1 class="txt-usuario" id="txtUser"></h1>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-12 px-4">
+        <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h1">Quantidade de acessos:</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+                <div class="btn-group mr-2">
+                    <button class="btn btn-sm btn-outline-secondary">Share</button>
+                    <button class="btn btn-sm btn-outline-secondary">Export</button>
+                </div>
+                <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                    <span data-feather="calendar"></span>
+                    This week
+                </button>
+            </div>
+        </div>
+
+        <canvas class="my-4  w-100" id="myChart" width="10px" height="10px"></canvas>
+
+
+
+
+
+        <div class="card text-center">
+            <div class="card-header">
+                Metas Diárias:
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Verificar noticias:</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar"
+                        aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%"></div>
+                </div>
+                <p1>1/10</p1>
+                <a href="#" class="btn btn-dark">Verificar</a>
+            </div>
+
+        </div>
+
+        <section class="container-fluid graficos">
+            <div class="col-lg-6">
+                <h1>Preferência de temas :</h1>
+                <canvas id="pie-chart" width="10px" height="10px"></canvas>
+            </div>
+            <div class="col-lg-6">
+                <h1>Notícias mais lidas :</h1>
+                <canvas id="polar-chart" width="10px" height="10px"></canvas>
+            </div>
+        </section>
+
+
+
+
+
+    </main>
+    <section class="wrapper ">
+        <header class="wrapper-header container-fluid">
+
+
+        </header>
+
+        <main class="wrapper-main container-fluid">
+            <div class="table-responsive">
+                <table class="table table-striped table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Data de Nascimento</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Senha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblUsers">
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </section>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+    <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
+    <script>
+        $(function () {
+            $('.dropdown-toggle').dropdown();
+        });
+    </script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+        log = document.getElementById('login').innerText = "Adm"
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script>
+        var ctx = document.getElementById("myChart");
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"],
+                datasets: [{
+                    data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+                    lineTension: 0,
+                    backgroundColor: 'transparent',
+                    borderColor: 'black', //#007bff 
+                    borderWidth: 5,
+                    pointBackgroundColor: 'black'
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: false
+                        }
+                    }]
+                },
+                legend: {
+                    display: false,
+
+                }
+
+            }
+        });
+    </script>
+    <script>
+        new Chart(document.getElementById("pie-chart"), {
+            type: 'pie',
+            data: {
+                labels: ["Ciência", "Saúde", "Política", "Segurança Pública", "Curiosidades"],
+                datasets: [{
+                    label: "Population (millions)",
+                    backgroundColor: ["blue", "purple", "green", "#e8c3b9", "red"],
+                    data: [2478, 5267, 734, 784, 433]
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+
+                }
+            }
+        });
+    </script>
+    <script>
+        new Chart(document.getElementById("polar-chart"), {
+
+            type: 'horizontalBar',
+            data: {
+                labels: ["Alpinista", "Transplante", "Fim do Mundo"],
+                datasets: [
+                    {
+                        label: "Visitas",
+                        backgroundColor: ["blue", "purple", "green"],
+                        data: [2478, 5267, 734, 784, 433]
+                    }
+                ]
+            },
+            options: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    
+                }
+            }
+        });
+    </script>
+    <script>
+        (function () {
+
+            // verificar se já existe usuário logado
+            let loggedUser = getDataInSessionStorage(),
+                tblUsers = document.querySelector("#tblUsers"),
+                btnLogout = document.querySelector("#btnLogout");
+
+            // listar usuário logado
+            document.querySelector("#navbarDropdownMenuLink").innerHTML = `Usuário logado: <strong>${loggedUser.nome}</strong>`;
+
+            // listar usuários na tabela
+            listUsers(tblUsers, loggedUser);
+
+            // evento para clique no botão de deslogar
+            btnLogout.addEventListener("click", (e) => { logout(e) })
+
+            // setando adm caso ainda não esteja setado
+            setAdmUser();
+        })();
+    </script>
+    <script>
+        let loggedUser = JSON.parse(sessionStorage.getItem("usuario_logado")) || undefined;
+
+        if (!loggedUser) {
+            document.getElementById("drop").style.display = 'none'
+
+
+        }
+        else {
+            document.getElementById("login").style.display = 'none'
+        }        
+    </script>
+
+</body>

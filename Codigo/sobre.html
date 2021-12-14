@@ -4,19 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>site tiaw</title>
-
+    <title>fact or fake</title>
+    <link rel="shortcut icon" type="imagex/png" href="imagens/selo-fake.png">
     <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="css/sobre.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+        <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/0fa763f45b.js" crossorigin="anonymous"></script>
+
+    <!-- Sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
+
 <body>
     <header class=".container-fluid header">
-                   
-        <img src="imagens/selo-fake.png" >
+
+        <a href="index.html"><img src="imagens/selo-fake.png"></a>
         <div class="container_nav">
             <input type="checkbox" id="menuToggle">
             <label for="menuToggle" class="menu-icon">
@@ -26,25 +42,52 @@
 
             <nav class="nav menu1">
                 <a class="nav-link active" href="index.html">Home </a>
+                <a class="nav-link " href="verificador.html">Verificador </a>
                 <a class="nav-link" href="sobre.html">Sobre </a>
-                <a class="nav-link" href="contatos.html">Contato</a>
-                
+                <a class="nav-link" href="contatos.html">DEVs</a>
+                <a class="nav-link" id="login" href="login.html">Login</a>
+                <li class="nav-item dropdown bg-black" id='drop'>
+                    <a class="nav-link dropdown-toggle bg-black " href="#" id="navbarDropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="True" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item bg-black" id="dashboard" href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a>
+                        
+                        <a class="dropdown-item bg-black "  id="btnLogout" href=""><i class="fa fa-sign-out"></i>Sair</a>
+
+
+                    </div>
+
 
             </nav>
 
 
-            
+
+
     </header>
+
+
+
+
     <main class=".container-fluid main">
         <h1>Sobre</h1>
-        <p1><strong>Quem somos: </strong> Quem somos: Somos um grupo de estudantes da Puc Minas que foi
-            atarefado de resolver algum problema da sociedade, e optamos pelas Fake News.</p1>
-        <p2><strong>Porque Fake News? : </strong>Considerando a situação da Covid-19, muitas pessoas tem apresentado
-             dificuldades em encontrar reportagens com informações confiáveis, ou que não seguem alguma
-              ideologia partidária ou anti-vacina. Mas fora isso a era da tecnologia já dificulta a troca
-               de informações uma vez que qualquer um pode inventar algo e divulgar como verdade.</p2>
-        <p3><strong>Objetivo:</strong>  O nosso objetivo é facilitar para você encontrar o que precisa para completar um trabalho
-             de escola ou se educar sobre algum assunto de forma mais segura.</p3>    
+        <p3>
+            <h3><strong>Quem somos ? </strong></h3>Somos um grupo de estudantes da Puc Minas que foi
+            atarefado de resolver algum problema da sociedade, e optamos pelas Fake News.
+        </p3>
+        <p3>
+            <h3><strong>Porque Fake News ? : </strong></h3>Considerando a situação da Covid-19, muitas pessoas tem
+            apresentado
+            dificuldades em encontrar reportagens com informações confiáveis, ou que não seguem alguma
+            ideologia partidária ou anti-vacina. Mas fora isso a era da tecnologia já dificulta a troca
+            de informações uma vez que qualquer um pode inventar algo e divulgar como verdade.
+        </p3>
+        <p3>
+            <h3><strong>Objetivo:</strong></h3> O nosso objetivo é facilitar para você encontrar o que precisa para
+            completar um trabalho
+            de escola ou se educar sobre algum assunto de forma mais segura.
+        </p3>
 
     </main>
 
@@ -52,28 +95,80 @@
 
 
     <footer class=".container-fluid footer">
-        <p>Copyright 2021 - Disciplina de Desenvolvimento de Interfaces Web - <p2>ICEI PUC Minas</p2></p>
-        <div class="logo">
-          
-           <img src="imagens/puc logo.png" >
-        </div>
-      </footer>
+        <p>Copyright 2021 -TRABALHO INTERDISCIPLINAR: APLICAÇÕES WEB - <p2>ICEI PUC Minas</p2>
+        </p>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
-<script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
-<script>
-    $(function () {
-        $('.dropdown-toggle').dropdown();
-    });
-</script>
+    </footer>
+        <script src="js/main.js"></script>
+        <script>
+            let loggedUser = JSON.parse(sessionStorage.getItem("usuario_logado")) || undefined;
+    
+            if (!loggedUser) {
+                document.getElementById("drop").style.display = 'none'
+    
+    
+            }
+            else {
+                document.getElementById("login").style.display = 'none'
+                if(loggedUser.tipo != 'adm'){
+                document.getElementById("dashboard").style.display = 'none'
+
+            }
+            }        
+        </script>
+    
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+        <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+        <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
+        <script>
+            $(function () {
+                $('.dropdown-toggle').dropdown();
+            });
+        </script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+        <script>
+            let btnLogout = document.getElementById("btnLogout") 
+            btnLogout.addEventListener("click",logout)
+    
+            function logout() {
+                    sessionStorage.removeItem("usuario_logado");
+                    
+                }
+        </script>
+        <script>
+            (function () {
+                // verificar se já existe usuário logado
+    
+                let loggedUser = getDataInSessionStorage(),
+                    tblUsers = document.querySelector("#tblUsers");
+                    
+    
+    
+    
+                // listar usuário logado
+                document.querySelector("#navbarDropdownMenuLink").innerHTML = `Usuário logado: <strong>${loggedUser.nome}</strong>`;
+    
+                // listar usuários na tabela
+                listUsers(tblUsers, loggedUser);
+    
+                // evento para clique no botão de deslogar
+                
+    
+                // setando adm caso ainda não esteja setado
+                setAdmUser();
+    
+            })();
+        </script>
+
 </body>
+
 </html>
