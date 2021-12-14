@@ -15,5 +15,5 @@
 ID|Descrição|
 |--|-------|
 |RE-01|O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 14/12/2021|
-|RE-02|O aplicativo deve se restringir às tecnologias básicas da Web no Frontend|
+|RE-02|O projeto deve ser desenvolvido remotamente em função de restrições sanitárias|
 |RE-03|A equipe não pode subcontratar o desenvolvimento do trabalho|
