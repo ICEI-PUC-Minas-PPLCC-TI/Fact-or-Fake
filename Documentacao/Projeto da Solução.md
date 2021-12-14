@@ -30,3 +30,8 @@ ID|Descrição|
  
  -JavaScript
 
+ -Json
+ 
+ -NewsApi
+ 
+ 
