@@ -21,8 +21,12 @@ ID|Descrição|
 ## Tecnologias:
 
  -Visual Studio Code
+ 
  -Replit
+ 
  -HTML
+ 
  -CSS
+ 
  -JavaScript
 
