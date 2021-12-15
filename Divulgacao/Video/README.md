@@ -1,4 +1,7 @@
 # Divulgação: Vídeo do Projeto
 
-Nesta pasta inclua arquivos de vídeo produzidos para divulgação do projeto e seus resutados.
+
+## Link do vídeo:
+
+https://www.youtube.com/watch?v=rec7xK9LVuw&ab_channel=OLYNTHO
 
